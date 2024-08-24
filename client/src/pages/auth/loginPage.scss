@@ -1,0 +1,318 @@
+@import "../../css-config/mixins.scss";
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+  * *::after *::before{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+// body{
+//     background-color:rgb(36, 45, 52);
+// }
+.transparentBG{
+    position: fixed; /* Make it appear on top of other content */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex; /* Center the content vertically */
+    justify-content: center;
+    align-items: center;
+    z-index: 101;
+}
+.box{
+    width: 600px;
+    height: 643px;
+    background:rgb(33, 33, 33);
+    margin-left: auto;
+    margin-right: auto;
+    // margin-top: -43px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 102;
+    transform: translateX(100%);
+    animation: cartSlide 0.3s ease forwards;
+}
+.bodywrap{
+    text-align: center;
+    background-color: transparent;
+    h1{
+        span{
+            animation: cartSlide 0.3s ease forwards;
+        }
+    }
+}
+
+.transitionDiv {
+    // background: red;
+    height: 100px;
+    width: 200px;
+    margin: 0 auto;
+  }
+  
+  @keyframes inAnimation {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  @keyframes outAnimation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+
+.authHead{
+    
+    width: 100%;
+    // background: rgb(40, 39, 39);
+    height: 63px;
+    overflow: hidden;
+}
+#close {
+	overflow: hidden;
+	position: relative;
+	border: none;
+	padding: 0;
+	width: 34px; height: 34px;
+	border-radius: 50%;
+	background: transparent;
+	color: #f5f5f5;
+	font: inherit;
+	text-indent: 100%;
+	cursor: pointer;
+    margin-top: 20px;
+    margin-left: 20px;
+	
+	/* &:focus {
+		outline: solid 0 transparent;
+		box-shadow: 0 0 0 2px #8ed0f9
+	} */
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+#close:before, #close:after {
+    position:absolute;
+    top: 22%; left: calc(50% - .0625em);
+    width: .100em; height: 54%;
+    border-radius: .125em;
+    transform: rotate(45deg);
+    background: currentcolor;
+    content: ''
+}
+
+#close:after { 
+    transform: rotate(-45deg); 
+}
+#close:hover {
+    background: #181919
+}
+#logo{
+    height: 27px;
+    width: 30px;
+    left: 220px;
+    position: relative;
+    top: 10px;
+}
+#sign{
+  
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.bodywrap a{
+     text-decoration: none;
+     color: white;
+     cursor: pointer;
+     
+}
+.authBtn{
+    display: block;
+    background-color: #ffffff;
+  padding: 3px 44px;
+  border-radius: 40px;
+  width: fit-content;
+  max-width: 300px;
+     margin-left: auto;
+     margin-right: auto;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 700;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+.authBtn p{
+    color: #626464 !important;
+    margin-bottom:0 ;
+}
+.btn1{
+    display: block;
+    background-color: #ffffff;
+  padding: 14px 58px;
+  border-radius: 40px;
+  width: fit-content;
+  max-width: 300px;
+     margin-left: auto;
+     margin-right: auto;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 700;
+    color: #626464;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+
+}
+.btn1 p{
+    color: #626464 !important;
+    margin-bottom: 0;
+}
+.authPara{  
+    position: relative;
+    margin: 0;
+    
+}
+
+#glogo{
+    width: 55px;
+    height: 40px;
+}
+#alogo{
+    width: 17px;
+    height: 18px;
+    margin-right: 20px;
+}
+#line{
+    color:#E6E8E9;
+    margin-top: 21px;
+    
+}
+#line p:before,#line p:after{
+    position:relative;
+    content: '';
+    height: 0.1px;
+    width: 27.7%;
+    background: #d8d8d836;
+    display: inline-block;
+    left: 0px;
+    vertical-align: middle;
+}
+
+#line p::before{
+    margin-right: 2px;
+}
+#line p::after{
+    margin-left: 2px;
+}
+.other_login_cred{
+    background-color: #e6e8e900;
+    border: 1px solid #d8d8d836;
+    padding: 20px 10px;
+    border-radius: 5px;
+    font-size: medium;
+    width: 358px;
+    // margin-top: 21px;
+    color: #E6E8E9;
+    
+}
+.other_login_cred::placeholder{   
+    position: relative;
+    font-size: medium;
+    padding: 20px 10px;
+    transition: 0.3s;
+    transform-origin: center;
+}
+.other_login_cred:focus{
+    border: 2px solid #E87121;
+    outline: none;
+}
+.other_login_cred:focus::placeholder
+{
+    color: #E87121;
+    font-size: small;
+    top: -16px;
+    left: -10px;
+}
+#btn3{
+   display: inline-block;
+    // margin-top: 29px;
+    width: 358px;
+    border-radius: 40px;
+    border:none;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 700;
+    font-size: medium;
+    padding: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: black;
+}
+#btn3:hover{
+    background-color: #ffffffca;
+}
+#btn4{
+    display: inline-block;
+    //  margin-top: 23px;
+     width: 358px;
+     border-radius: 40px;
+     border:1px solid rgba(255, 255, 255, 0.362);
+     font-family: 'Poppins', sans-serif; 
+     font-weight: 700;
+     font-size: medium;
+     padding: 14px;
+     cursor: pointer;
+     transition: 0.2s;
+     background-color: #18191900;
+     color: white;
+ }
+ #close{
+    transform: translateX(-100%);
+    animation: cartSlideOut 0.3s ease forwards;
+ }
+ .input form{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    gap:16px;
+ }
+ .input p {
+    margin-bottom: 0;
+ }
+ .input p span{
+    font-weight: 700;
+    color: #E87121;
+    cursor: pointer;
+ }
+ @keyframes cartSlide {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes cartSlideOut {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
